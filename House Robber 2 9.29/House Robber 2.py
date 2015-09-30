@@ -10,7 +10,7 @@ determine the maximum amount of money you can rob tonight without alerting the p
 
 Solution: Dynamic programing (fibonacci)
     fn 0 - n-1 
-    vn 1 - n-1 
+    vn 1 - n-2 
     fn and vn are approach of houses rober I 
     ans = max { fn-1, vn-2 + money.nth }
 """
