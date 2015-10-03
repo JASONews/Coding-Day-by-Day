@@ -16,23 +16,23 @@ There is one obstacle in the middle of a 3x3 grid as illustrated below.
 The total number of unique paths is 2.
 
 Solution: DP
-            set arr[i] where obstacleGrid[i][j] is 1 to be 0
+            set arr[j] where ob[i][j] is 1 to be 0
 """
 class Solution(object):
-    def uniquePathsWithObstacles(self, obstacleGrid):
+    def uniquePathsWithObstacles(self, ob):
         """
-        :type obstacleGrid: List[List[int]]
+        :type ob: List[List[int]]
         :rtype: int
         """
-        ob = obstacleGrid
-        if len(obstacleGrid) is 0:
+        ob = obstacleGrid 
+        if len(ob) is 0:
             return 0
-        if len(obstacleGrid[0]) is 0:
+        if len(ob[0]) is 0:
             return 0
             
-        arr = [0]*(len(obstacleGrid[0]))
+        arr = [0]*(len(ob[0]))
         arr[0] = 1
-        for i in range(0, len(obstacleGrid)):
+        for i in range(0, len(ob)):
             for j in range(0, len(arr)):
                 if ob[i][j] is 1:
                     arr[j] = 0
