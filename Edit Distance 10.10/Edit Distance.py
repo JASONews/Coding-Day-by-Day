@@ -10,7 +10,7 @@ c) Replace a character
 Solution: DP
     arr[i][j] is minimum operations required to do when converting word1 to word2.
 """
-ass Solution(object):
+class Solution(object):
     def minDistance(self, word1, word2):
         """
         :type word1: str
